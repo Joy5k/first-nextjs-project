@@ -1,7 +1,12 @@
 import Post from "@/Components/Post/Post";
+import { useRouter } from "next/router";
 
 const postDetails = ({ post }) => {
     console.log(post);
+    const router = useRouter();
+    const handleBack = () => {
+   router.push("/posts")
+    }
     return (
         <div>
            <div className="card mt-10 mx-10   bg-base-300 shadow-xl">
@@ -10,6 +15,7 @@ const postDetails = ({ post }) => {
                     <h2 className="card-title">Title {post?.title }</h2>
                     <p>{post?.body }</p>
     <div className="card-actions justify-end">
+      <button onClick={handleBack} className="btn btn-primary">Back to posts</button>
     </div>
   </div>
 </div>
