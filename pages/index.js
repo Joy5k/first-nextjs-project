@@ -15,8 +15,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main className={`${styles.main} ${inter.className}`} >
         <h2>Hello</h2>
+        <button className="btn ">Button</button>
+<button className="btn btn-primary">Button</button>
+<button className="btn btn-secondary">Button</button>
+<button className="btn btn-accent">Button</button>
+<button className="btn btn-ghost">Button</button>
+        <button className="btn btn-link">Button</button>
+        
+
         <Image src='/nature.jpg' width={350} height={250}
       ></Image>
         <Link href="/blog">
