@@ -6,7 +6,7 @@ const posts = ({posts}) => {
         <div>
             <h3 className="text-2xl font-semibold">The number of posts {posts.length }</h3>
             {
-                posts.map(post => <Post post={post}></Post>)
+                posts.map(post => <Post key={post.id} post={post}></Post>)
        }
         </div>
     );

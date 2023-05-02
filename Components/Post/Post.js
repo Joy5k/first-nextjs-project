@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const Post = ({post}) => {
     return (
@@ -5,7 +6,9 @@ const Post = ({post}) => {
         <div className="card-body">
                 <h2 className="card-title">{post.title }</h2>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">See more</button>
+                    <Link href={`/posts/${post?.id}`}>
+                    <button className="btn btn-primary">See more</button>
+                    </Link>
           </div>
         </div>
       </div>
